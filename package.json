@@ -5,6 +5,7 @@
   "engines": {
     "node": ">=5.2"
   },
+  "files": ["lib", "dist"],
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
@@ -15,8 +16,7 @@
     "test": "karma start",
     "testDev": "karma start --no-single-run --browsers Chrome,PhantomJS"
   },
-  "main": "lib/js/index.js",
-  "author": "Bill Gao",
+  "main": "lib/index.js",
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "^6.0.20",
