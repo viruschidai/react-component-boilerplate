@@ -13,8 +13,8 @@
     "babel": "babel -d lib src --ignore=spec.js",
     "babelDev": "watch 'npm run babel' ./src",
     "build": "npm run clean && npm run babel && webpack --config webpack.prod.config.js",
-    "test": "karma start",
-    "testDev": "karma start --no-single-run --browsers Chrome,PhantomJS"
+    "test": "NODE_ENV=test karma start",
+    "testDev": "NODE_ENV=test karma start --no-single-run --browsers PhantomJS"
   },
   "main": "lib/index.js",
   "devDependencies": {
