@@ -10,9 +10,9 @@
     "start": "node server.js",
     "lint": "eslint src",
     "clean": "rm -rf ./target ./lib ./dist",
-    "babel": "babel -d lib src --ignore=spec.js",
+    "babel": "NODE_ENV=production babel -d lib src --ignore=spec.js",
     "babelDev": "watch 'npm run babel' ./src",
-    "build": "npm run clean && npm run babel && webpack --config webpack.prod.config.js",
+    "build": "NODE_ENV=production npm run clean && npm run babel && webpack --config webpack.prod.config.js",
     "test": "NODE_ENV=test karma start",
     "testDev": "NODE_ENV=test karma start --no-single-run --browsers PhantomJS"
   },
