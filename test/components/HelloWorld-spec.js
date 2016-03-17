@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
 import ReactDOM from 'react-dom';
-import HelloWorld from './HelloWorld';
+import HelloWorld from '../../src/components/HelloWorld';
 
 describe('HelloWorld', function () {
   let component;

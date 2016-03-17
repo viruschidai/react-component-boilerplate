@@ -14,7 +14,7 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       {pattern: 'node_modules/phantomjs-polyfills/polyfills/*.js', included: true},
-      {pattern: 'src/**/*-spec.js', included: true}
+      {pattern: 'test/**/*-spec.js', included: true}
     ],
 
     // list of files to exclude
@@ -23,7 +23,7 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/**/*-spec.js': ['webpack']
+      'test/**/*-spec.js': ['webpack']
     },
 
     webpack: {

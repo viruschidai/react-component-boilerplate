@@ -4,16 +4,22 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: [
-    './src/index',
-    './src/scss/default.scss'
+    './src/scss/default.scss',
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    library: 'HelloWorld',
+    libraryTarget: 'umd'
+  },
+  externals: {
+    'react': 'react',
+    'react-dom': 'react-dom'
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": {
+      'process.env': {
         "NODE_ENV": JSON.stringify("production")
       }
     }),
