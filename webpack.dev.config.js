@@ -21,7 +21,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.jsx?$/, loader: 'babel', include },
+      { test: /\.js(x)?$/, loader: 'babel', include },
       { test: /\.(png|jpg|gif)$/, loader: "url?limit=10000&mimetype=image/png" },
       { test: /\.(s)*css$/, loader: "style!css!sass" }
     ]
